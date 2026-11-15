@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of MD Parvez Kabir Sakib - Creative Developer, Web Designer, WordPress Specialist, and CSE Student.">
+  <meta name="author" content="MD Parvez Kabir Sakib">
+  <meta name="theme-color" content="#0b0f19">
+  <title>MD Parvez Kabir Sakib | Creative Developer & CSE Student</title>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL NAVIGATION BAR (GLASSMORPHIC STICKY)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" aria-label="MD Parvez Kabir Sakib Home">
+          <span>PKS</span><span class="logo-dot"></span>
+        </a>
+
+        <!-- Mobile Navigation Hamburger Toggle -->
+        <button class="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation Links Menu -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="education.html" class="nav-link">Education</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="activities.html" class="nav-link">Activities</a></li>
+          <li><a href="cv.html" class="nav-link">Curriculum Vitae</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="video.html" class="nav-link">Video</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION: 2-COLUMN BALANCED COMPOSITION
+         ====================================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- LEFT COLUMN: Typography & Introduction -->
+          <div class="hero-left reveal-item reveal-left">
+            <span class="hero-subtitle-intro">
+              <i class="fa-solid fa-sparkles text-gradient"></i> Hello, I'm
+            </span>
+
+            <h1 class="hero-title">
+              MD Parvez Kabir <span class="text-gradient">Sakib</span>
+            </h1>
+
+            <!-- Animated Typewriter Sequence -->
+            <div class="hero-typewriter-wrapper" aria-live="polite">
+              <span>I'm a&nbsp;</span>
+              <span id="typewriter-text" class="typewriter-text">Frontend Developer</span>
+              <span class="typewriter-cursor" aria-hidden="true"></span>
+            </div>
+
+            <!-- Professional Summary Statement -->
+            <p class="hero-description">
+              I'm a Computer Science student passionate about web design, frontend development, WordPress customization, and creative digital experiences. I enjoy transforming ideas into clean, functional, and visually engaging websites.
+            </p>
+
+            <!-- Call to Actions -->
+            <div class="hero-actions">
+              <a href="assets/documents/CV.pdf" download="MD_Parvez_Kabir_Sakib_CV.pdf" class="btn btn-primary">
+                <i class="fa-solid fa-file-arrow-down"></i> Download CV
+              </a>
+              <a href="projects.html" class="btn btn-secondary">
+                <i class="fa-solid fa-diagram-project"></i> Explore My Projects
+              </a>
+            </div>
+
+            <!-- Social Media Quick Bar (EDITABLE URLs) -->
+            <div class="hero-socials">
+              <span class="hero-socials-label">Connect:</span>
+              <!-- Replace with your real GitHub profile URL -->
+              <a href="https://github.com/parvezkabirsakib" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <!-- Replace with your real LinkedIn profile URL -->
+              <a href="https://www.linkedin.com/in/parvez-kabir-sakib-220777326/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <!-- Replace with your real X/Twitter profile URL -->
+              <a href="https://x.com/ParvezKabir03" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="X (Twitter) Profile">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <!-- Replace with your real YouTube profile URL -->
+              <a href="https://www.youtube.com/@ojanarohoshoershondhane9243" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube Channel">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Premium Circular Profile Composition -->
+          <div class="hero-right reveal-item reveal-right">
+            <div class="profile-composition-container">
+              <!-- Soft Atmospheric Glow -->
+              <div class="profile-glow-backdrop" aria-hidden="true"></div>
+
+              <!-- Animated Counter-Rotating Gradient Ring 1 (Outer) -->
+              <div class="orbit-ring-outer" aria-hidden="true"></div>
+
+              <!-- Animated Counter-Rotating Gradient Ring 2 (Inner) -->
+              <div class="orbit-ring-inner" aria-hidden="true"></div>
+
+              <!-- PROFILE IMAGE CONTAINER: Replace assets/images/profile.jpg with your portrait photo -->
+              <div class="profile-image-frame">
+                <img src="assets/images/profile.jpg" alt="Portrait of MD Parvez Kabir Sakib" loading="eager">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURED HIGHLIGHTS SECTION
+         ====================================================================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal-item reveal-up">
+          <span class="section-label"><i class="fa-solid fa-compass"></i> Expertise Overview</span>
+          <h2>Crafting <span class="text-gradient">Digital Impact</span></h2>
+          <p>Combining computer science fundamentals with creative frontend engineering and multimedia storytelling.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Highlight 1: Web Development -->
+          <div class="highlight-card reveal-item reveal-up delay-1">
+            <div class="highlight-icon-box">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Architecting clean, modular, semantic web applications using modern HTML5, CSS3, and JavaScript with strict attention to performance and cross-browser fluidity.</p>
+            <div class="highlight-tags">
+              <span class="highlight-tag">Semantic HTML5</span>
+              <span class="highlight-tag">Modern CSS3</span>
+              <span class="highlight-tag">Vanilla JS</span>
+              <span class="highlight-tag">Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- Highlight 2: Creative Design -->
+          <div class="highlight-card reveal-item reveal-up delay-2">
+            <div class="highlight-icon-box">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3>Creative Design</h3>
+            <p>Designing sophisticated interfaces inspired by dark luxury agency aesthetics, intentional asymmetry, balanced whitespace, and purposeful micro-interactions.</p>
+            <div class="highlight-tags">
+              <span class="highlight-tag">UI/UX Strategy</span>
+              <span class="highlight-tag">WordPress Custom</span>
+              <span class="highlight-tag">Visual Identity</span>
+              <span class="highlight-tag">Design Systems</span>
+            </div>
+          </div>
+
+          <!-- Highlight 3: Video Production -->
+          <div class="highlight-card reveal-item reveal-up delay-3">
+            <div class="highlight-icon-box">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <h3>Video Production</h3>
+            <p>Producing engaging tech tutorials, digital stories, and content through precision video editing, dynamic pacing, and crisp audio engineering.</p>
+            <div class="highlight-tags">
+              <span class="highlight-tag">Adobe Premiere Pro</span>
+              <span class="highlight-tag">Adobe Audition</span>
+              <span class="highlight-tag">Tech Storytelling</span>
+              <span class="highlight-tag">YouTube Creator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         QUICK STATISTICS SECTION (ANIMATED COUNTERS)
+         ====================================================================== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          
+          <!-- Stat 1 -->
+          <div class="stat-item reveal-item reveal-up delay-1">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="5">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Academic Projects</div>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="stat-item reveal-item reveal-up delay-2">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="3">0</span>
+            </div>
+            <div class="stat-label">Learning Institutions</div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="stat-item reveal-item reveal-up delay-3">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="5">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Professional Interests</div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="stat-item reveal-item reveal-up delay-4">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="7">0</span>
+            </div>
+            <div class="stat-label">Portfolio Sections</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CALL TO ACTION SECTION
+         ====================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal-item reveal-scale">
+          <span class="section-label"><i class="fa-solid fa-paper-plane"></i> Let's Collaborate</span>
+          <h2>Have a Project in Mind?</h2>
+          <p>Let's create something meaningful together. Whether you are looking for custom frontend solutions, WordPress expertise, or creative media collaboration, I'm ready to build.</p>
+          <a href="about.html#contact" class="btn btn-primary">
+            <i class="fa-solid fa-comment-dots"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER (STRUCTURED 3-COLUMN)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <!-- COLUMN 01 — SUPPORT -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Support</h4>
+          <div class="footer-contact-cards">
+            <!-- Contact card 1 -->
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="footer-contact-text">
+                <span>9 AM - 8 PM</span>
+                <a href="tel:+8801761612529">+880 1761612529</a>
+              </div>
+            </div>
+
+            <!-- Contact card 2 -->
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="footer-contact-text">
+                <span>Location</span>
+                <strong>Dhaka, Bangladesh</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 02 — ABOUT ME / QUICK LINKS -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Navigation</h4>
+          <div class="footer-links-grid">
+            <!-- Group 1 -->
+            <div class="footer-links-group">
+              <a href="index.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home</a>
+              <a href="education.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Education</a>
+              <a href="projects.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Projects</a>
+            </div>
+            <!-- Group 2 -->
+            <div class="footer-links-group">
+              <a href="activities.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Activities</a>
+              <a href="cv.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Curriculum Vitae</a>
+              <a href="about.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> About Me</a>
+            </div>
+            <!-- Group 3 -->
+            <div class="footer-links-group">
+              <a href="video.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Video</a>
+              <a href="https://github.com/parvezkabirsakib" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-solid fa-angle-right"></i> GitHub</a>
+              <a href="about.html#terms" class="footer-link"><i class="fa-solid fa-angle-right"></i> Privacy / Terms</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 03 — STAY CONNECTED -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Stay Connected</h4>
+          <div class="footer-connected-block">
+            <div class="footer-author-name">MD Parvez Kabir Sakib</div>
+            <div class="footer-author-uni">Daffodil International University, Dhaka</div>
+            <!-- Clickable Email with Editable placeholder -->
+            <a href="mailto:parvezkabirsakib@gmail.com" class="footer-email-link">
+              <i class="fa-solid fa-envelope"></i> parvezkabirsakib@gmail.com
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER BOTTOM -->
+      <div class="footer-bottom">
+        <div class="footer-badge-wrap">
+          <span class="brand-logo" style="font-size: 1.15rem;">PKS<span class="logo-dot"></span></span>
+          <span>| Creative Experience Architect</span>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="footer-social-icons">
+          <a href="https://www.facebook.com/parvezkabirsakib/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/ParvezKabir03" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/parvez-kabir-sakib-220777326/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.threads.com/@parvezkabirsakib" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Threads">
+            <i class="fa-brands fa-threads"></i>
+          </a>
+          <a href="https://www.youtube.com/@ojanarohoshoershondhane9243" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+
+        <div class="footer-copyright">
+          © 2026 All Rights Reserved. Designed & Powered By <span>MD Parvez Kabir Sakib</span>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>

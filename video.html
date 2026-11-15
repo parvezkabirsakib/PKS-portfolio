@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description"
+    content="Video Library & Media Showcase of MD Parvez Kabir Sakib featuring YouTube tutorials, Academic Project walkthrough, and Facebook reels.">
+  <meta name="author" content="MD Parvez Kabir Sakib">
+  <meta name="theme-color" content="#0b0f19">
+  <title>Video Library | MD Parvez Kabir Sakib</title>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       GLOBAL NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo" aria-label="MD Parvez Kabir Sakib Home">
+          <span>PKS</span><span class="logo-dot"></span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="education.html" class="nav-link">Education</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="activities.html" class="nav-link">Activities</a></li>
+          <li><a href="cv.html" class="nav-link">Curriculum Vitae</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="video.html" class="nav-link active">Video</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         PAGE HERO BANNER
+         ====================================================================== -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label"><i class="fa-solid fa-clapperboard"></i> Media Hub & Video Library</span>
+          <h1>Video <span class="text-gradient">Library</span></h1>
+          <p>Watch investigative documentaries from <strong>Ojana rohoshoer shondhane</strong>, academic capstone
+            demonstrations, and Facebook reels. Click any card to play instantly on this page or watch directly on
+            YouTube.</p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="video-filter-bar">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fa-solid fa-layer-group"></i> All Media (13)
+          </button>
+          <button class="filter-btn" data-filter="academic">
+            <i class="fa-solid fa-graduation-cap"></i> Academic Project (1)
+          </button>
+          <button class="filter-btn" data-filter="youtube">
+            <i class="fa-brands fa-youtube" style="color: #ff0033;"></i> YouTube Library (8)
+          </button>
+          <button class="filter-btn" data-filter="facebook">
+            <i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Reels (4)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SPOTLIGHT: ACADEMIC PROJECT VIDEO
+         ====================================================================== -->
+    <section class="academic-spotlight-wrapper video-media-section" data-category="academic">
+      <div class="container">
+        <div class="academic-spotlight-card">
+
+          <!-- Left: Information & Description -->
+          <div class="academic-spotlight-info">
+            <span class="section-label"
+              style="background: rgba(0, 242, 254, 0.12); border-color: rgba(0, 242, 254, 0.35);">
+              <i class="fa-solid fa-graduation-cap"></i> Featured Academic Project Video
+            </span>
+            <h3>Academic Project Demonstration & Architecture Walkthrough</h3>
+            <p>
+              Official demonstration walkthrough of the Computer Science & Engineering semester project. Covers
+              application architecture, algorithms, database integration, responsive front-end execution, and live
+              functionality.
+            </p>
+            <div style="display: flex; gap: 0.85rem; align-items: center; flex-wrap: wrap;">
+              <button class="btn btn-primary btn-sm play-in-page-btn" data-target-card="academic-card"
+                data-video-id="nrmVHuRNnRA">
+                <i class="fa-solid fa-play"></i> Play in Page
+              </button>
+              <a href="https://www.youtube.com/watch?v=nrmVHuRNnRA" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Watch on YouTube
+              </a>
+              <a href="projects.html" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-diagram-project"></i> View Projects Page
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Instant-Play Video Card -->
+          <div>
+            <div id="academic-card" class="video-lib-card instant-play-card" data-video-id="nrmVHuRNnRA"
+              data-type="youtube" role="button" tabindex="0" aria-label="Play Academic Project Video">
+
+              <img src="https://img.youtube.com/vi/nrmVHuRNnRA/hqdefault.jpg" alt="Academic Project Demonstration Video"
+                class="video-lib-thumb" onerror="this.onerror=null; this.src='assets/images/project-1.jpg'"
+                loading="eager">
+
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">Academic Project Demonstration | CSE Capstone</div>
+                <div class="video-lib-channel">
+                  <i class="fa-solid fa-graduation-cap" style="color: var(--cyan-accent);"></i> MD Parvez Kabir Sakib
+                </div>
+              </div>
+
+              <div class="video-yt-play-btn" aria-hidden="true">
+                <i class="fa-solid fa-play"></i>
+              </div>
+
+              <span class="video-lib-duration">Project Demo</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 01: YOUTUBE VIDEO LIBRARY (EXACTLY 8 VIDEOS, 2-COLUMN GRID)
+         ====================================================================== -->
+    <section class="section section-alt video-media-section" data-category="youtube" style="padding: 4.5rem 0;">
+      <div class="container">
+
+        <div class="section-header text-left" style="margin-bottom: 2.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="section-label"><i class="fa-brands fa-youtube" style="color: #ff0033;"></i> YouTube Channel
+                Collection</span>
+              <h2>YouTube <span class="text-gradient">Video Library</span></h2>
+              <p>Explore full investigative episodes, mystery documentaries, and creative stories from <strong>Ojana
+                  rohoshoer shondhane</strong>.</p>
+            </div>
+            <a href="https://www.youtube.com/@ojanarohoshoershondhane9243" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Visit Channel
+            </a>
+          </div>
+        </div>
+
+        <!-- 2-Column Responsive Video Library Grid (Matches Reference Design) -->
+        <div class="video-library-grid">
+
+          <!-- Video 1: cOyONlgnYEM -->
+          <div class="video-lib-item">
+            <div class="video-lib-card instant-play-card" data-video-id="cOyONlgnYEM" data-type="youtube" role="button"
+              tabindex="0" aria-label="Play অভিশপ্ত পুতুল | Annabelle real story">
+              <img src="https://img.youtube.com/vi/cOyONlgnYEM/hqdefault.jpg" alt="অভিশপ্ত পুতুল | Annabelle real story"
+                class="video-lib-thumb" onerror="this.onerror=null; this.src='assets/images/video-thumb-1.jpg'"
+                loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">অভিশপ্ত পুতুল | Annabelle real story | Cursed Doll Mystery</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-youtube"></i> Ojana rohoshoer shondhane</div>
+              </div>
+              <div class="video-yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+              <span class="video-lib-duration">09:18</span>
+            </div>
+            <div class="video-lib-actions">
+              <button class="btn btn-primary btn-sm play-in-page-btn" data-video-id="cOyONlgnYEM"><i
+                  class="fa-solid fa-play"></i> Play in Page</button>
+              <a href="https://www.youtube.com/watch?v=cOyONlgnYEM" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm"><i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Watch on
+                YouTube</a>
+            </div>
+          </div>
+
+          <!-- Video 2: f-Ti_qt50nE -->
+          <div class="video-lib-item">
+            <div class="video-lib-card instant-play-card" data-video-id="f-Ti_qt50nE" data-type="youtube" role="button"
+              tabindex="0" aria-label="Play সৌদি আরবের এক আজব বিয়ের প্রথা">
+              <img src="https://img.youtube.com/vi/f-Ti_qt50nE/hqdefault.jpg" alt="সৌদি আরবের এক আজব বিয়ের প্রথা"
+                class="video-lib-thumb" onerror="this.onerror=null; this.src='assets/images/video-thumb-2.jpg'"
+                loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">সৌদি আরবের এক আজব বিয়ের প্রথা | A strange wedding tradition</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-youtube"></i> Ojana rohoshoer shondhane</div>
+              </div>
+              <div class="video-yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+              <span class="video-lib-duration">08:42</span>
+            </div>
+            <div class="video-lib-actions">
+              <button class="btn btn-primary btn-sm play-in-page-btn" data-video-id="f-Ti_qt50nE"><i
+                  class="fa-solid fa-play"></i> Play in Page</button>
+              <a href="https://www.youtube.com/watch?v=f-Ti_qt50nE" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm"><i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Watch on
+                YouTube</a>
+            </div>
+          </div>
+
+          <!-- Video 3: eseqIbfhqu8 -->
+          <div class="video-lib-item">
+            <div class="video-lib-card instant-play-card" data-video-id="eseqIbfhqu8" data-type="youtube" role="button"
+              tabindex="0" aria-label="Play রহস্যময় প্রাচীন ইতিহাস ও হারিয়ে যাওয়া সভ্যতা">
+              <img src="https://img.youtube.com/vi/eseqIbfhqu8/hqdefault.jpg"
+                alt="রহস্যময় প্রাচীন ইতিহাস ও হারিয়ে যাওয়া সভ্যতা" class="video-lib-thumb"
+                onerror="this.onerror=null; this.src='assets/images/video-thumb-3.jpg'" loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">রহস্যময় প্রাচীন ইতিহাস ও হারিয়ে যাওয়া সভ্যতা | Unsolved Mysteries of
+                  History</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-youtube"></i> Ojana rohoshoer shondhane</div>
+              </div>
+              <div class="video-yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+              <span class="video-lib-duration">10:15</span>
+            </div>
+            <div class="video-lib-actions">
+              <button class="btn btn-primary btn-sm play-in-page-btn" data-video-id="eseqIbfhqu8"><i
+                  class="fa-solid fa-play"></i> Play in Page</button>
+              <a href="https://www.youtube.com/watch?v=eseqIbfhqu8" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm"><i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Watch on
+                YouTube</a>
+            </div>
+          </div>
+
+          <!-- Video 4: _FYNepNMkaU -->
+          <div class="video-lib-item">
+            <div class="video-lib-card instant-play-card" data-video-id="_FYNepNMkaU" data-type="youtube" role="button"
+              tabindex="0" aria-label="Play অজানা রহস্যের সন্ধান পর্ব ০১">
+              <img src="https://img.youtube.com/vi/_FYNepNMkaU/hqdefault.jpg" alt="অজানা রহস্যের সন্ধান পর্ব ০১"
+                class="video-lib-thumb" onerror="this.onerror=null; this.src='assets/images/video-thumb-4.jpg'"
+                loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">অজানা রহস্যের সন্ধান পর্ব ০১ | Behind The Unexplained Phenomenon</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-youtube"></i> Ojana rohoshoer shondhane</div>
+              </div>
+              <div class="video-yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+              <span class="video-lib-duration">11:34</span>
+            </div>
+            <div class="video-lib-actions">
+              <button class="btn btn-primary btn-sm play-in-page-btn" data-video-id="_FYNepNMkaU"><i
+                  class="fa-solid fa-play"></i> Play in Page</button>
+              <a href="https://www.youtube.com/watch?v=_FYNepNMkaU" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm"><i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Watch on
+                YouTube</a>
+            </div>
+          </div>
+
+          <!-- Video 5: vWIcdQmuPng -->
+          <div class="video-lib-item">
+            <div class="video-lib-card instant-play-card" data-video-id="vWIcdQmuPng" data-type="youtube" role="button"
+              tabindex="0" aria-label="Play রহস্যজনক প্রাচীন স্থাপত্য ও বিজ্ঞান">
+              <img src="https://img.youtube.com/vi/vWIcdQmuPng/hqdefault.jpg" alt="রহস্যজনক প্রাচীন স্থাপত্য ও বিজ্ঞান"
+                class="video-lib-thumb" onerror="this.onerror=null; this.src='assets/images/video-thumb-5.jpg'"
+                loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">রহস্যজনক প্রাচীন স্থাপত্য ও বিজ্ঞান | Ancient Engineering Secrets</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-youtube"></i> Ojana rohoshoer shondhane</div>
+              </div>
+              <div class="video-yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+              <span class="video-lib-duration">07:56</span>
+            </div>
+            <div class="video-lib-actions">
+              <button class="btn btn-primary btn-sm play-in-page-btn" data-video-id="vWIcdQmuPng"><i
+                  class="fa-solid fa-play"></i> Play in Page</button>
+              <a href="https://www.youtube.com/watch?v=vWIcdQmuPng" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm"><i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Watch on
+                YouTube</a>
+            </div>
+          </div>
+
+          <!-- Video 6: x81RcjE1cTs -->
+          <div class="video-lib-item">
+            <div class="video-lib-card instant-play-card" data-video-id="x81RcjE1cTs" data-type="youtube" role="button"
+              tabindex="0" aria-label="Play অদ্ভুত মহাজাগতিক রহস্য ও ঘটনা">
+              <img src="https://img.youtube.com/vi/x81RcjE1cTs/hqdefault.jpg" alt="অদ্ভুত মহাজাগতিক রহস্য ও ঘটনা"
+                class="video-lib-thumb" onerror="this.onerror=null; this.src='assets/images/video-thumb-6.jpg'"
+                loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">অদ্ভুত মহাজাগতিক রহস্য ও ঘটনা | Cosmic Wonders & Space Exploration</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-youtube"></i> Ojana rohoshoer shondhane</div>
+              </div>
+              <div class="video-yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+              <span class="video-lib-duration">09:40</span>
+            </div>
+            <div class="video-lib-actions">
+              <button class="btn btn-primary btn-sm play-in-page-btn" data-video-id="x81RcjE1cTs"><i
+                  class="fa-solid fa-play"></i> Play in Page</button>
+              <a href="https://www.youtube.com/watch?v=x81RcjE1cTs" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm"><i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Watch on
+                YouTube</a>
+            </div>
+          </div>
+
+          <!-- Video 7: U2lfQs9kjqU -->
+          <div class="video-lib-item">
+            <div class="video-lib-card instant-play-card" data-video-id="U2lfQs9kjqU" data-type="youtube" role="button"
+              tabindex="0" aria-label="Play পৃথিবীর সবচেয়ে দুর্গম ও রহস্যময় স্থান">
+              <img src="https://img.youtube.com/vi/U2lfQs9kjqU/hqdefault.jpg"
+                alt="পৃথিবীর সবচেয়ে দুর্গম ও রহস্যময় স্থান" class="video-lib-thumb"
+                onerror="this.onerror=null; this.src='assets/images/video-thumb-7.jpg'" loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">পৃথিবীর সবচেয়ে দুর্গম ও রহস্যময় স্থান | Forbidden Places on Earth</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-youtube"></i> Ojana rohoshoer shondhane</div>
+              </div>
+              <div class="video-yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+              <span class="video-lib-duration">12:08</span>
+            </div>
+            <div class="video-lib-actions">
+              <button class="btn btn-primary btn-sm play-in-page-btn" data-video-id="U2lfQs9kjqU"><i
+                  class="fa-solid fa-play"></i> Play in Page</button>
+              <a href="https://www.youtube.com/watch?v=U2lfQs9kjqU" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm"><i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Watch on
+                YouTube</a>
+            </div>
+          </div>
+
+          <!-- Video 8: LRXXv54TLu4 -->
+          <div class="video-lib-item">
+            <div class="video-lib-card instant-play-card" data-video-id="LRXXv54TLu4" data-type="youtube" role="button"
+              tabindex="0" aria-label="Play রহস্যময় দ্বীপের অজানা কাহিনী">
+              <img src="https://img.youtube.com/vi/LRXXv54TLu4/hqdefault.jpg" alt="রহস্যময় দ্বীপের অজানা কাহিনী"
+                class="video-lib-thumb" onerror="this.onerror=null; this.src='assets/images/video-thumb-8.jpg'"
+                loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">রহস্যময় দ্বীপের অজানা কাহিনী | The Secrets of Unknown Island</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-youtube"></i> Ojana rohoshoer shondhane</div>
+              </div>
+              <div class="video-yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+              <span class="video-lib-duration">14:22</span>
+            </div>
+            <div class="video-lib-actions">
+              <button class="btn btn-primary btn-sm play-in-page-btn" data-video-id="LRXXv54TLu4"><i
+                  class="fa-solid fa-play"></i> Play in Page</button>
+              <a href="https://www.youtube.com/watch?v=LRXXv54TLu4" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm"><i class="fa-brands fa-youtube" style="color: #ff0033;"></i> Watch on
+                YouTube</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 02: FACEBOOK REELS SHOWCASE (EXACTLY 4 REELS WITH 1-CLICK BUTTONS)
+         ====================================================================== -->
+    <section class="section video-media-section" data-category="facebook" style="padding: 4.5rem 0;">
+      <div class="container">
+
+        <div class="section-header text-left" style="margin-bottom: 2.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="section-label"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Social Media
+                Content</span>
+              <h2>Facebook <span class="text-gradient">Reels & Tech Highlights</span></h2>
+              <p>Short-form vertical video insights and campus moments. Click the button to visit Facebook and play
+                instantly.</p>
+            </div>
+            <a href="https://www.facebook.com/parvezkabirsakib/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Follow on Facebook
+            </a>
+          </div>
+        </div>
+
+        <!-- 4-Column Responsive Reels Grid with 1-Click Buttons -->
+        <div class="video-reels-grid">
+
+          <!-- Reel 1: 4853653504861491 -->
+          <div class="video-lib-item">
+            <div class="video-lib-card" style="aspect-ratio: 16 / 9;">
+              <img src="assets/images/video-fb-1.jpg" alt="Facebook Reel 01" class="video-lib-thumb" loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">Behind The Scenes & Creative Content</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook
+                  Reel 01</div>
+              </div>
+              <div class="video-fb-play-btn" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></div>
+              <span class="video-lib-duration">Reel 01</span>
+            </div>
+            <div class="video-lib-actions">
+              <a href="https://www.facebook.com/reel/4853653504861491" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm" style="width: 100%;">
+                <i class="fa-brands fa-facebook-f"></i> 1-Click: Watch Reel on Facebook
+              </a>
+            </div>
+          </div>
+
+          <!-- Reel 2: 697656012989044 -->
+          <div class="video-lib-item">
+            <div class="video-lib-card" style="aspect-ratio: 16 / 9;">
+              <img src="assets/images/video-fb-2.jpg" alt="Facebook Reel 02" class="video-lib-thumb" loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">DIU Campus Moments & Tech Exploration</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook
+                  Reel 02</div>
+              </div>
+              <div class="video-fb-play-btn" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></div>
+              <span class="video-lib-duration">Reel 02</span>
+            </div>
+            <div class="video-lib-actions">
+              <a href="https://www.facebook.com/reel/697656012989044" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm" style="width: 100%;">
+                <i class="fa-brands fa-facebook-f"></i> 1-Click: Watch Reel on Facebook
+              </a>
+            </div>
+          </div>
+
+          <!-- Reel 3: 590208967367436 -->
+          <div class="video-lib-item">
+            <div class="video-lib-card" style="aspect-ratio: 16 / 9;">
+              <img src="assets/images/video-fb-3.jpg" alt="Facebook Reel 03" class="video-lib-thumb" loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">Late Night Coding Session & Creative Edit</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook
+                  Reel 03</div>
+              </div>
+              <div class="video-fb-play-btn" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></div>
+              <span class="video-lib-duration">Reel 03</span>
+            </div>
+            <div class="video-lib-actions">
+              <a href="https://www.facebook.com/reel/590208967367436" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm" style="width: 100%;">
+                <i class="fa-brands fa-facebook-f"></i> 1-Click: Watch Reel on Facebook
+              </a>
+            </div>
+          </div>
+
+          <!-- Reel 4: 1731743704258465 -->
+          <div class="video-lib-item">
+            <div class="video-lib-card" style="aspect-ratio: 16 / 9;">
+              <img src="assets/images/video-fb-4.jpg" alt="Facebook Reel 04" class="video-lib-thumb" loading="lazy">
+              <div class="video-lib-top-overlay">
+                <div class="video-lib-title">Digital Storytelling & Audio-Visual Workflow</div>
+                <div class="video-lib-channel"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook
+                  Reel 04</div>
+              </div>
+              <div class="video-fb-play-btn" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></div>
+              <span class="video-lib-duration">Reel 04</span>
+            </div>
+            <div class="video-lib-actions">
+              <a href="https://www.facebook.com/reel/1731743704258465" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm" style="width: 100%;">
+                <i class="fa-brands fa-facebook-f"></i> 1-Click: Watch Reel on Facebook
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="cta-banner">
+          <span class="section-label"><i class="fa-solid fa-users-viewfinder"></i> Audience Engagement</span>
+          <h2>Have questions about a video or want to suggest a topic?</h2>
+          <p>Feel free to reach out directly through email or connect on social media.</p>
+          <a href="about.html#contact" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> Send a Message
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+
+        <!-- COLUMN 01 — SUPPORT -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Support</h4>
+          <div class="footer-contact-cards">
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="footer-contact-text">
+                <span>9 AM - 8 PM</span>
+                <a href="tel:+8801761612529">+880 1761612529</a>
+              </div>
+            </div>
+
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="footer-contact-text">
+                <span>Location</span>
+                <strong>Dhaka, Bangladesh</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 02 — ABOUT ME / QUICK LINKS -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Navigation</h4>
+          <div class="footer-links-grid">
+            <div class="footer-links-group">
+              <a href="index.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Home</a>
+              <a href="education.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Education</a>
+              <a href="projects.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Projects</a>
+            </div>
+            <div class="footer-links-group">
+              <a href="activities.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Activities</a>
+              <a href="cv.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Curriculum Vitae</a>
+              <a href="about.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> About Me</a>
+            </div>
+            <div class="footer-links-group">
+              <a href="video.html" class="footer-link"><i class="fa-solid fa-angle-right"></i> Video</a>
+              <a href="https://github.com/parvezkabirsakib" target="_blank" rel="noopener noreferrer"
+                class="footer-link"><i class="fa-solid fa-angle-right"></i> GitHub</a>
+              <a href="about.html#terms" class="footer-link"><i class="fa-solid fa-angle-right"></i> Privacy / Terms</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 03 — STAY CONNECTED -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Stay Connected</h4>
+          <div class="footer-connected-block">
+            <div class="footer-author-name">MD Parvez Kabir Sakib</div>
+            <div class="footer-author-uni">Daffodil International University, Dhaka</div>
+            <a href="mailto:parvezkabirsakib@gmail.com" class="footer-email-link">
+              <i class="fa-solid fa-envelope"></i> parvezkabirsakib@gmail.com
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER BOTTOM -->
+      <div class="footer-bottom">
+        <div class="footer-badge-wrap">
+          <span class="brand-logo" style="font-size: 1.15rem;">PKS<span class="logo-dot"></span></span>
+          <span>| Creative Experience Architect</span>
+        </div>
+
+        <div class="footer-social-icons">
+          <a href="https://www.facebook.com/parvezkabirsakib/" target="_blank" rel="noopener noreferrer"
+            class="social-btn" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/ParvezKabir03" target="_blank" rel="noopener noreferrer" class="social-btn"
+            aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/parvez-kabir-sakib-220777326/" target="_blank" rel="noopener noreferrer"
+            class="social-btn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.threads.com/@parvezkabirsakib" target="_blank" rel="noopener noreferrer"
+            class="social-btn" aria-label="Threads">
+            <i class="fa-brands fa-threads"></i>
+          </a>
+          <a href="https://www.youtube.com/@ojanarohoshoershondhane9243" target="_blank" rel="noopener noreferrer"
+            class="social-btn" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+
+        <div class="footer-copyright">
+          © 2026 All Rights Reserved. Designed & Powered By <span>MD Parvez Kabir Sakib</span>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
