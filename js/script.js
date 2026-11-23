@@ -10,9 +10,58 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // ------------------------------------------------------------------------
-  // 1. PAGE ENTRANCE & BODY STATE
+  // 1. PAGE ENTRANCE & FIRST-TIME INFINITY PRELOADER (HOMEPAGE)
   // ------------------------------------------------------------------------
   document.body.classList.add('page-loaded');
+
+  const homePreloader = document.getElementById('home-preloader');
+  if (homePreloader) {
+    const isForcePreview = window.location.search.includes('loader=1') || window.location.search.includes('intro=1');
+    const hasVisited = sessionStorage.getItem('pks_has_visited_homepage');
+
+    if (hasVisited && !isForcePreview) {
+      // User has already visited the homepage in this session: skip immediately
+      homePreloader.style.display = 'none';
+    } else {
+      // First visit in current session: record session state
+      sessionStorage.setItem('pks_has_visited_homepage', 'true');
+
+      let hasDismissed = false;
+      const hidePreloader = () => {
+        if (hasDismissed) return;
+        hasDismissed = true;
+        homePreloader.classList.add('is-hidden');
+        setTimeout(() => {
+          homePreloader.style.display = 'none';
+        }, 700);
+      };
+
+      // Ensure minimum display duration (~1.8 seconds) for smooth aesthetic viewing
+      const minDisplayTime = 1800;
+      const startTime = performance.now();
+
+      if (document.readyState === 'complete') {
+        setTimeout(hidePreloader, minDisplayTime);
+      } else {
+        window.addEventListener('load', () => {
+          const elapsed = performance.now() - startTime;
+          const remaining = Math.max(0, minDisplayTime - elapsed);
+          setTimeout(hidePreloader, remaining);
+        });
+        // Safety timeout fallback
+        setTimeout(hidePreloader, 3200);
+      }
+
+      // Allow click anywhere to immediately skip if user wants
+      homePreloader.addEventListener('click', hidePreloader);
+    }
+
+    // Helper exposed for easy re-testing via browser console: resetPreloader()
+    window.resetPreloader = () => {
+      sessionStorage.removeItem('pks_has_visited_homepage');
+      window.location.reload();
+    };
+  }
 
   // ------------------------------------------------------------------------
   // 2. GLOBAL NAVIGATION & MOBILE MENU
@@ -103,6 +152,41 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     // Fallback if IntersectionObserver is not supported
     revealItems.forEach(item => item.classList.add('is-revealed'));
+  }
+
+  // ------------------------------------------------------------------------
+  // 3.5. SHATTER TYPE 3D GLASS ANIMATION (REACTBITS PRO - "MD PARVEZ KABIR")
+  // ------------------------------------------------------------------------
+  const shatterContainer = document.getElementById('shatter-name');
+  if (shatterContainer && window.initShatterType) {
+    window.initShatterType(shatterContainer, {
+      text: 'MD Parvez Kabir',
+      fontFamily: 'Poppins, sans-serif',
+      fontWeight: 800,
+      letterSpacing: -0.02,
+      lineHeight: 1.15,
+      align: 'left',
+      colors: ['#FFFFFF', '#FFFFFF'],
+      accentColor: '#FF8C00', // Signature orange back & shard facets
+      shardSize: 0.10, // Distinct glass fragments safely sized
+      irregularity: 0.6, // Organic fracture lines
+      crack: 0.75, // Glowing crack lines
+      crackRadius: 1.2, // Controlled crack radius
+      heal: 0.85, // Smooth crack lingering before healing
+      shatter: true, // Shatter on click
+      shatterRadius: 1.8, // Safely contained shatter coverage across name
+      force: 1.4, // Controlled outward explosion that stays within safe margins
+      spin: 1.5, // 3D tumbling of shards
+      depth: 1.2, // 3D forward depth projection
+      gravity: 0,
+      reassemble: 1.6, // 1.6 seconds display time before reassembling
+      stiffness: 0.55,
+      glint: 0.9, // Specular glass reflections
+      intro: 'assemble',
+      introDuration: 1.6,
+      autoplay: false,
+      interactive: true
+    });
   }
 
   // ------------------------------------------------------------------------
@@ -239,8 +323,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Subtle 3D Tilt for Highlight Cards
-    const tiltCards = document.querySelectorAll('.highlight-card, .project-row, .social-hub-card');
+    // Subtle 3D Tilt for Cards & Media
+    const tiltCards = document.querySelectorAll('.highlight-card, .project-row, .social-hub-card, .video-lib-item, .academic-spotlight-card');
     tiltCards.forEach(card => {
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -275,11 +359,220 @@ document.addEventListener('DOMContentLoaded', () => {
           const category = section.getAttribute('data-category');
           if (filter === 'all' || filter === category) {
             section.style.display = '';
+            section.querySelectorAll('.reveal-item').forEach(item => item.classList.add('is-revealed'));
           } else {
             section.style.display = 'none';
           }
         });
       });
     });
+  }
+
+  // ------------------------------------------------------------------------
+  // 9. AUREM-STYLE DUAL CUSTOM MOUSE CURSOR (SMOOTH TRAILING PHYSICS)
+  // ------------------------------------------------------------------------
+  const isFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (isFinePointer && !prefersReduced) {
+    // 1. Create and inject the two cursor elements
+    const cursorDot = document.createElement('div');
+    cursorDot.className = 'custom-cursor-dot';
+    cursorDot.setAttribute('aria-hidden', 'true');
+
+    const cursorRing = document.createElement('div');
+    cursorRing.className = 'custom-cursor-ring';
+    cursorRing.setAttribute('aria-hidden', 'true');
+
+    document.body.appendChild(cursorDot);
+    document.body.appendChild(cursorRing);
+    document.body.classList.add('has-custom-cursor');
+
+    // Coordinates
+    let mouseX = -100;
+    let mouseY = -100;
+    let ringX = -100;
+    let ringY = -100;
+    let isInitialized = false;
+
+    // Movement listener (Instant inner dot)
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (!isInitialized) {
+        ringX = mouseX;
+        ringY = mouseY;
+        isInitialized = true;
+        cursorDot.classList.add('is-visible');
+        cursorRing.classList.add('is-visible');
+      }
+
+      // Inner dot: instant mouse following without delay
+      cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    }, { passive: true });
+
+    // Smooth Trailing Outer Ring Loop (LERP)
+    const lerp = (start, end, factor) => start + (end - start) * factor;
+    const lerpFactor = 0.15; // Smooth trailing physics
+
+    const animateCursor = () => {
+      if (isInitialized) {
+        ringX = lerp(ringX, mouseX, lerpFactor);
+        ringY = lerp(ringY, mouseY, lerpFactor);
+        cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+      }
+      requestAnimationFrame(animateCursor);
+    };
+    requestAnimationFrame(animateCursor);
+
+    // Mouse leave / enter window
+    document.addEventListener('mouseleave', () => {
+      cursorDot.classList.remove('is-visible');
+      cursorRing.classList.remove('is-visible');
+    });
+
+    document.addEventListener('mouseenter', () => {
+      if (isInitialized) {
+        cursorDot.classList.add('is-visible');
+        cursorRing.classList.add('is-visible');
+      }
+    });
+
+    window.addEventListener('blur', () => {
+      cursorDot.classList.remove('is-visible');
+      cursorRing.classList.remove('is-visible');
+    });
+
+    // Interactive elements hover detection (Event Delegation for best performance & dynamic elements)
+    const interactiveSelector = 'a, button, .btn, .nav-link, .filter-btn, .social-btn, .video-lib-card, .video-lib-item, .highlight-card, .project-row, .timeline-card, .core-skill-card, .familiar-skill-card, .media-skill-card, .academic-spotlight-card, [role="button"], summary';
+
+    document.addEventListener('mouseover', (e) => {
+      const interactiveEl = e.target.closest(interactiveSelector);
+      const textInputEl = e.target.closest('input, textarea, select');
+
+      if (textInputEl) {
+        cursorDot.classList.add('is-hidden');
+        cursorRing.classList.add('is-hidden');
+      } else if (interactiveEl) {
+        cursorRing.classList.add('is-hovering');
+        cursorDot.classList.add('is-hovering');
+        cursorDot.classList.remove('is-hidden');
+        cursorRing.classList.remove('is-hidden');
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      const interactiveEl = e.target.closest(interactiveSelector);
+      const textInputEl = e.target.closest('input, textarea, select');
+
+      if (textInputEl) {
+        cursorDot.classList.remove('is-hidden');
+        cursorRing.classList.remove('is-hidden');
+      }
+      if (interactiveEl) {
+        cursorRing.classList.remove('is-hovering');
+        cursorDot.classList.remove('is-hovering');
+      }
+    });
+  }
+
+  // ------------------------------------------------------------------------
+  // 10. INTERACTIVE CONTACT FORM HANDLER (DELIVERY TO GMAIL)
+  // ------------------------------------------------------------------------
+  const contactForm = document.getElementById('portfolio-contact-form');
+  if (contactForm) {
+    const submitBtns = contactForm.querySelectorAll('.btn-send-message');
+    const statusAlert = document.getElementById('form-status-alert');
+
+    const setButtonState = (state) => {
+      // state: 'default' | 'loading' | 'success'
+      submitBtns.forEach(btn => {
+        const btnContent = btn.querySelector('.btn-content');
+        const btnLoading = btn.querySelector('.btn-loading');
+        const btnSuccess = btn.querySelector('.btn-success-state');
+
+        btn.classList.remove('is-loading', 'is-success');
+
+        if (state === 'loading') {
+          btn.disabled = true;
+          btn.classList.add('is-loading');
+          if (btnContent) btnContent.style.display = 'none';
+          if (btnLoading) btnLoading.style.display = 'inline-flex';
+          if (btnSuccess) btnSuccess.style.display = 'none';
+        } else if (state === 'success') {
+          btn.disabled = true;
+          btn.classList.add('is-success');
+          if (btnContent) btnContent.style.display = 'none';
+          if (btnLoading) btnLoading.style.display = 'none';
+          if (btnSuccess) btnSuccess.style.display = 'inline-flex';
+        } else {
+          btn.disabled = false;
+          if (btnContent) btnContent.style.display = 'inline-flex';
+          if (btnLoading) btnLoading.style.display = 'none';
+          if (btnSuccess) btnSuccess.style.display = 'none';
+        }
+      });
+    };
+
+    contactForm.addEventListener('submit', (e) => {
+      const name = (contactForm.querySelector('[name="name"]').value || '').trim();
+      const email = (contactForm.querySelector('[name="email"]').value || '').trim();
+      const subject = (contactForm.querySelector('[name="subject"]').value || '').trim();
+      const message = (contactForm.querySelector('[name="message"]').value || '').trim();
+
+      if (!name || !email || !subject || !message) {
+        e.preventDefault();
+        showStatus('<i class="fa-solid fa-circle-exclamation"></i> Please fill in all required fields before sending.', 'warning');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        e.preventDefault();
+        showStatus('<i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email address.', 'warning');
+        return;
+      }
+
+      // Fast native browser POST targetted to hidden iframe (avoids slow AJAX / CORS hangs)
+      setButtonState('loading');
+      hideStatus();
+
+      setTimeout(() => {
+        setButtonState('success');
+
+        showStatus(`
+          <div style="display:flex; flex-direction:column; gap:0.4rem; width:100%;">
+            <div style="display:flex; align-items:center; gap:0.5rem; font-weight:700;">
+              <i class="fa-solid fa-circle-check" style="color:#22c55e; font-size:1.15rem;"></i>
+              <span>Thank you! Your message was sent successfully.</span>
+            </div>
+            <div style="font-size:0.86rem; color:#cbd5e1; line-height:1.5;">
+              Dispatched directly to <strong>parvezkabirsakib@gmail.com</strong>.
+            </div>
+          </div>
+        `, 'success');
+
+        contactForm.reset();
+
+        setTimeout(() => {
+          setButtonState('default');
+        }, 3500);
+      }, 1600);
+    });
+
+    function showStatus(htmlMsg, type) {
+      if (!statusAlert) return;
+      statusAlert.className = `form-status-alert status-${type}`;
+      statusAlert.innerHTML = htmlMsg;
+      statusAlert.style.display = 'flex';
+      statusAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function hideStatus() {
+      if (!statusAlert) return;
+      statusAlert.style.display = 'none';
+      statusAlert.innerHTML = '';
+    }
   }
 });

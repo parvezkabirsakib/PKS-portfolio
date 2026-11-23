@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="50%" stop-color="#FF8C00"/>
+      <stop offset="100%" stop-color="#FF5E00"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#151d2d"/>
+      <stop offset="100%" stop-color="#0b0f19"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#FF8C00" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+  <!-- Background rounded card -->
+  <rect width="64" height="64" rx="14" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="rgba(255, 140, 0, 0.45)" stroke-width="2"/>
+  <!-- PKS Monogram Text -->
+  <text x="26" y="42" font-family="'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#ffffff" letter-spacing="-0.5" text-anchor="middle">PKS</text>
+  <!-- Glowing Brand Accent Dot -->
+  <circle cx="52" cy="40" r="4.5" fill="url(#orangeGrad)" filter="url(#glow)"/>
+</svg>
