@@ -1,13 +1,4 @@
-/* ==========================================================================
-   MASTER STYLESHEET: MD PARVEZ KABIR SAKIB - PREMIUM PORTFOLIO
-   Art Direction: Dark Luxury Creative Agency & Interactive Experience
-   Color Palette: Dark Navy (#0b0f19) & Premium Gradient Orange
-   Typography: Poppins (Google Fonts)
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. CSS VARIABLES & DESIGN TOKENS
-   -------------------------------------------------------------------------- */
+/* 1. CSS VARIABLES & DESIGN TOKENS */
 :root {
   /* Color Identity */
   --bg-primary: #0b0f19;
@@ -74,9 +65,7 @@
   --transition-slow: 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --------------------------------------------------------------------------
-   2. GLOBAL RESETS & FOUNDATION
-   -------------------------------------------------------------------------- */
+/*GLOBAL RESETS & FOUNDATION */
 *,
 *::before,
 *::after {
@@ -184,9 +173,7 @@ ol {
   color: #ffffff;
 }
 
-/* --------------------------------------------------------------------------
-   3. TYPOGRAPHY HIERARCHY
-   -------------------------------------------------------------------------- */
+/*TYPOGRAPHY HIERARCHY */
 h1,
 h2,
 h3,
@@ -270,9 +257,7 @@ p {
   font-size: 1.05rem;
 }
 
-/* --------------------------------------------------------------------------
-   4. LAYOUT CONTAINERS & UTILITIES
-   -------------------------------------------------------------------------- */
+/*LAYOUT CONTAINERS & UTILITIES*/
 .container {
   width: 100%;
   max-width: var(--container-width);
@@ -312,9 +297,7 @@ p {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* --------------------------------------------------------------------------
-   5. BUTTONS & INTERACTIVE ELEMENTS
-   -------------------------------------------------------------------------- */
+/*BUTTONS & INTERACTIVE ELEMENTS*/
 .btn {
   display: inline-flex;
   align-items: center;
@@ -402,9 +385,7 @@ p {
   box-shadow: var(--blue-glow);
 }
 
-/* --------------------------------------------------------------------------
-   6. GLOBAL NAVIGATION (GLASSMORPHIC STICKY NAVBAR)
-   -------------------------------------------------------------------------- */
+/*GLOBAL NAVIGATION (GLASSMORPHIC STICKY NAVBAR) */
 .site-header {
   position: sticky;
   top: 0;
@@ -540,9 +521,7 @@ p {
   background: var(--cyan-accent);
 }
 
-/* --------------------------------------------------------------------------
-   7. HERO SECTION (HOME PAGE)
-   -------------------------------------------------------------------------- */
+/*HERO SECTION (HOME PAGE) */
 .hero-section {
   padding: clamp(3rem, 6vw, 6.5rem) 0 clamp(4rem, 8vw, 7rem);
   position: relative;
@@ -848,9 +827,7 @@ p {
   transform: scale(1.06);
 }
 
-/* --------------------------------------------------------------------------
-   8. FEATURED HIGHLIGHT CARDS (HOME PAGE)
-   -------------------------------------------------------------------------- */
+/*FEATURED HIGHLIGHT CARDS (HOME PAGE) */
 .highlight-card {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
@@ -943,9 +920,7 @@ p {
   border-color: rgba(255, 140, 0, 0.25);
 }
 
-/* --------------------------------------------------------------------------
-   9. QUICK STATISTICS COUNTERS (HOME PAGE)
-   -------------------------------------------------------------------------- */
+/*QUICK STATISTICS COUNTERS (HOME PAGE)*/
 .stats-section {
   padding: 4.5rem 0;
   background: var(--bg-secondary);
@@ -1009,9 +984,7 @@ p {
   letter-spacing: 0.02em;
 }
 
-/* --------------------------------------------------------------------------
-   10. CALL TO ACTION (CTA BANNER)
-   -------------------------------------------------------------------------- */
+/*CALL TO ACTION (CTA BANNER)*/
 .cta-banner {
   background: linear-gradient(135deg, rgba(21, 29, 45, 0.95) 0%, rgba(17, 24, 39, 0.98) 100%);
   border: 1px solid var(--border-card);
@@ -1047,9 +1020,7 @@ p {
   margin: 0 auto 2.5rem;
 }
 
-/* --------------------------------------------------------------------------
-   11. EDUCATION PAGE — TIMELINE COMPOSITION
-   -------------------------------------------------------------------------- */
+/*EDUCATION PAGE — TIMELINE COMPOSITION*/
 .timeline-container {
   position: relative;
   max-width: 860px;
@@ -1290,9 +1261,7 @@ p {
   transform: scale(1.15) translate(1px, -1px);
 }
 
-/* --------------------------------------------------------------------------
-   12. PROJECTS PAGE — HORIZONTAL DISTINCTIVE ROWS
-   -------------------------------------------------------------------------- */
+/*PROJECTS PAGE — HORIZONTAL DISTINCTIVE ROWS*/
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -1448,9 +1417,7 @@ p {
   flex-wrap: wrap;
 }
 
-/* --------------------------------------------------------------------------
-   13. ACTIVITIES PAGE — 3 DISTINCT SKILL SECTIONS
-   -------------------------------------------------------------------------- */
+/*ACTIVITIES PAGE — 3 DISTINCT SKILL SECTIONS*/
 .skills-stack-wrapper {
   display: flex;
   flex-direction: column;
@@ -1732,9 +1699,7 @@ p {
   opacity: 1;
 }
 
-/* --------------------------------------------------------------------------
-   14. CURRICULUM VITAE PAGE (EDITORIAL DOCUMENT AESTHETIC)
-   -------------------------------------------------------------------------- */
+/*CURRICULUM VITAE PAGE (EDITORIAL DOCUMENT AESTHETIC)*/
 .cv-wrapper {
   max-width: 960px;
   margin: 0 auto;
@@ -1886,9 +1851,7 @@ p {
   color: var(--text-contrast);
 }
 
-/* --------------------------------------------------------------------------
-   15. ABOUT ME PAGE — EDITORIAL STORYTELLING & CONTACT
-   -------------------------------------------------------------------------- */
+/* ABOUT ME PAGE — EDITORIAL STORYTELLING & CONTACT */
 .about-hero-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -2081,10 +2044,7 @@ p {
   margin-bottom: 1.25rem;
 }
 
-/* --------------------------------------------------------------------------
-   15.2 INTERACTIVE TWO-COLUMN CONTACT FORM (SEND ME A MESSAGE)
-   Full-width grid matching contact cards above, from first to last card
-   -------------------------------------------------------------------------- */
+/*INTERACTIVE TWO-COLUMN CONTACT FORM (SEND ME A MESSAGE)*/
 .contact-form-section {
   width: 100%;
   margin-top: 1.5rem;
@@ -2240,9 +2200,7 @@ p {
   min-height: 105px;
 }
 
-/* ==========================================================================
-   REFINED MODERN SEND MESSAGE BUTTON (STABLE, SMOOTH & THEME-PERFECT)
-   ========================================================================== */
+/*REFINED MODERN SEND MESSAGE BUTTON (STABLE, SMOOTH & THEME-PERFECT) */
 .btn-send-message {
   position: relative;
   display: inline-flex;
@@ -2382,9 +2340,7 @@ p {
   }
 }
 
-/* --------------------------------------------------------------------------
-   16. VIDEO SHOWCASE & VIDEO LIBRARY
-   -------------------------------------------------------------------------- */
+/*VIDEO SHOWCASE & VIDEO LIBRARY*/
 /* Video Library Filter Bar */
 .video-filter-bar {
   display: flex;
@@ -2858,9 +2814,7 @@ p {
   margin-top: auto;
 }
 
-/* --------------------------------------------------------------------------
-   17. GLOBAL FOOTER (STRUCTURED 3-COLUMN)
-   -------------------------------------------------------------------------- */
+/*FOOTER (STRUCTURED 3-COLUMN) */
 .site-footer {
   background: #080c14;
   border-top: 1px solid var(--border-subtle);
@@ -3049,9 +3003,7 @@ p {
   color: var(--text-secondary);
 }
 
-/* --------------------------------------------------------------------------
-   18. ANIMATION SYSTEM & SCROLL REVEALS
-   -------------------------------------------------------------------------- */
+/* ANIMATION SYSTEM & SCROLL REVEALS */
 /* Page entrance */
 .page-loaded {
   opacity: 1;
@@ -3121,9 +3073,7 @@ p {
   transition-delay: 0.6s;
 }
 
-/* --------------------------------------------------------------------------
-   19. RESPONSIVE MEDIA QUERIES
-   -------------------------------------------------------------------------- */
+/* RESPONSIVE MEDIA QUERIES */
 /* Large Desktop (1440px+) */
 @media (min-width: 1440px) {
   :root {
@@ -3356,9 +3306,7 @@ p {
   }
 }
 
-/* --------------------------------------------------------------------------
-   20. PRINT STYLES FOR CV
-   -------------------------------------------------------------------------- */
+/*PRINT STYLES FOR CV*/
 @media print {
   body {
     background: #ffffff !important;
@@ -3410,9 +3358,7 @@ p {
   }
 }
 
-/* --------------------------------------------------------------------------
-   21. ACCESSIBILITY: REDUCED MOTION PREFERENCE
-   -------------------------------------------------------------------------- */
+/*ACCESSIBILITY: REDUCED MOTION PREFERENCE*/
 @media (prefers-reduced-motion: reduce) {
 
   *,
@@ -3436,9 +3382,7 @@ p {
   }
 }
 
-/* --------------------------------------------------------------------------
-   22. AUREM-STYLE DUAL CUSTOM MOUSE CURSOR
-   -------------------------------------------------------------------------- */
+/*AUREM-STYLE DUAL CUSTOM MOUSE CURSOR */
 @media (hover: hover) and (pointer: fine) {
 
   body.has-custom-cursor,
@@ -3548,9 +3492,7 @@ p {
   z-index: 0;
 }
 
-/* --------------------------------------------------------------------------
-   24. HOMEPAGE INFINITY PRELOADER (LOADING-UI)
-   -------------------------------------------------------------------------- */
+/*HOMEPAGE INFINITY PRELOADER (LOADING-UI)*/
 .preloader-overlay {
   position: fixed;
   inset: 0;

@@ -1,17 +1,8 @@
-/**
- * ==========================================================================
- * MASTER JAVASCRIPT: MD PARVEZ KABIR SAKIB - PREMIUM PORTFOLIO
- * Art Direction: Dark Luxury Creative Agency & Interactive Experience
- * Technology: Vanilla JavaScript (ES6+), Native Browser APIs
- * ==========================================================================
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  // ------------------------------------------------------------------------
-  // 1. PAGE ENTRANCE & FIRST-TIME INFINITY PRELOADER (HOMEPAGE)
-  // ------------------------------------------------------------------------
+  //PRELOADER (HOMEPAGE)
+
   document.body.classList.add('page-loaded');
 
   const homePreloader = document.getElementById('home-preloader');
@@ -36,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 700);
       };
 
-      // Ensure minimum display duration (~1.8 seconds) for smooth aesthetic viewing
+      //display duration (~1.8 seconds) for smooth aesthetic viewing
       const minDisplayTime = 1800;
       const startTime = performance.now();
 
@@ -63,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  // ------------------------------------------------------------------------
-  // 2. GLOBAL NAVIGATION & MOBILE MENU
-  // ------------------------------------------------------------------------
+
+  //  GLOBAL NAVIGATION & MOBILE MENU
+
   const siteHeader = document.querySelector('.site-header');
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -130,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ------------------------------------------------------------------------
-  // 3. SCROLL REVEAL SYSTEM (INTERSECTION OBSERVER)
-  // ------------------------------------------------------------------------
+
+  //SCROLL REVEAL SYSTEM (INTERSECTION OBSERVER)
+
   const revealItems = document.querySelectorAll('.reveal-item');
   if ('IntersectionObserver' in window && revealItems.length > 0) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -154,9 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
     revealItems.forEach(item => item.classList.add('is-revealed'));
   }
 
-  // ------------------------------------------------------------------------
-  // 3.5. SHATTER TYPE 3D GLASS ANIMATION (REACTBITS PRO - "MD PARVEZ KABIR")
-  // ------------------------------------------------------------------------
+ 
+  //SHATTER TYPE 3D GLASS ANIMATION (REACTBITS PRO - "MD PARVEZ KABIR")
+ 
   const shatterContainer = document.getElementById('shatter-name');
   if (shatterContainer && window.initShatterType) {
     window.initShatterType(shatterContainer, {
@@ -189,9 +180,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ------------------------------------------------------------------------
-  // 4. TYPEWRITER ANIMATION (HOME PAGE)
-  // ------------------------------------------------------------------------
+
+  //TYPEWRITER ANIMATION (HOME PAGE)
+ 
   const typewriterElement = document.getElementById('typewriter-text');
   if (typewriterElement) {
     const phrases = [
@@ -235,9 +226,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeLoop, 500);
   }
 
-  // ------------------------------------------------------------------------
-  // 5. ANIMATED STATISTICS COUNTERS (HOME PAGE)
-  // ------------------------------------------------------------------------
+
+  //ANIMATED STATISTICS COUNTERS (HOME PAGE)
+ 
   const statNumbers = document.querySelectorAll('.stat-number');
   if (statNumbers.length > 0 && 'IntersectionObserver' in window) {
     const counterObserver = new IntersectionObserver((entries, observer) => {
@@ -267,9 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
     statNumbers.forEach(num => counterObserver.observe(num));
   }
 
-  // ------------------------------------------------------------------------
-  // 6. ACTIVITIES PAGE: SKILL METERS & PROGRESS BARS
-  // ------------------------------------------------------------------------
+  
+  //ACTIVITIES PAGE: SKILL METERS & PROGRESS BARS
+ 
   // A. Linear Progress Bars
   const progressFills = document.querySelectorAll('.progress-fill');
   if (progressFills.length > 0 && 'IntersectionObserver' in window) {
@@ -304,9 +295,9 @@ document.addEventListener('DOMContentLoaded', () => {
     circleMeters.forEach(meter => circleObserver.observe(meter));
   }
 
-  // ------------------------------------------------------------------------
-  // 7. DESKTOP INTERACTIVE MICRO-INTERACTIONS (MAGNETIC BUTTONS & 3D TILT)
-  // ------------------------------------------------------------------------
+
+  //DESKTOP INTERACTIVE MICRO-INTERACTIONS (MAGNETIC BUTTONS & 3D TILT)
+ 
   const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
   if (!isTouchDevice && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     // Magnetic Effect for primary buttons
@@ -342,9 +333,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ------------------------------------------------------------------------
+
   // 8. VIDEO SHOWCASE & FILTER CONTROLS (VIDEO.HTML)
-  // ------------------------------------------------------------------------
+ 
   // Video Filter Buttons (All Media / Academic / YouTube / Facebook)
   const filterBtns = document.querySelectorAll('.filter-btn');
   const mediaSections = document.querySelectorAll('.video-media-section');
@@ -368,9 +359,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ------------------------------------------------------------------------
-  // 9. AUREM-STYLE DUAL CUSTOM MOUSE CURSOR (SMOOTH TRAILING PHYSICS)
-  // ------------------------------------------------------------------------
+
+  //AUREM-STYLE DUAL CUSTOM MOUSE CURSOR (SMOOTH TRAILING PHYSICS)
+
   const isFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -477,9 +468,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ------------------------------------------------------------------------
-  // 10. INTERACTIVE CONTACT FORM HANDLER (DELIVERY TO GMAIL)
-  // ------------------------------------------------------------------------
+
+  //INTERACTIVE CONTACT FORM HANDLER (DELIVERY TO GMAIL)
+
   const contactForm = document.getElementById('portfolio-contact-form');
   if (contactForm) {
     const submitBtns = contactForm.querySelectorAll('.btn-send-message');

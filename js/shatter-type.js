@@ -1,12 +1,4 @@
-/**
- * ============================================================================
- * SHATTER TYPE - 3D Glass Shatter Text Animation
- * Technology: Three.js (WebGL) + Procedural Voronoi/Delaunay Shard Simulation
- * Interactive & Physics text component inspired by ReactBits Pro
- * Configured specifically for MD Parvez Kabir on the portfolio hero section.
- * Safe boundaries: Strictly contained to avoid navbar overlap and screen overflow.
- * ============================================================================
- */
+
 
 (function (window) {
   'use strict';
